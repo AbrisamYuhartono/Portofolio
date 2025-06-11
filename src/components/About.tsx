@@ -13,32 +13,23 @@ const About: React.FC = () => {
         <div className="grid lg:grid-cols-2 gap-12 items-start">
           {/* Bio Section */}
           <div className="space-y-6">
-            <div className="prose prose-lg text-gray-600 leading-relaxed">
+            <div className="prose prose-lg text-gray-600 leading-relaxed text-justify">
               <p>
-                I am an undergraduate Computer Engineering student at Universitas Indonesia with a strong 
-                passion for both software development and hardware engineering. My academic and organizational 
-                experiences have shaped me into a versatile and driven individual who seeks to bridge the gap 
-                between theory and impactful real-world solutions.
+                I am an undergraduate Computer Engineering student at Universitas Indonesia with a strong passion for both software development and hardware engineering. My academic journey and organizational experiences have shaped me into a versatile, driven individual who strives to bridge the gap between theory and impactful real-world solutions.
               </p>
-              
+
               <p>
-                With hands-on experience in C programming, Arduino, Proteus, and Tinkercad, I've developed a 
-                solid foundation in embedded systems and circuit design. At the same time, my roles in 
-                full-stack web development projects using React.js, Node.js, and MongoDB have fueled my 
-                interest in data analysis, machine learning, and scalable tech solutions.
+                With hands-on experience in C programming, Arduino, Proteus, and Tinkercad, I have built a solid foundation in embedded systems and circuit design. In parallel, my involvement in full-stack web development projects using React.js, Node.js, and MongoDB has fueled my interest in data analysis, machine learning, and scalable tech solutions.
               </p>
-              
+
               <p>
-                I have cultivated skills in research, project management, and team leadership—contributing to 
-                community initiatives and cross-functional collaboration. I am also proficient with tools such 
-                as Tableau, Looker, Microsoft Excel, Orange, and Google Suite, enabling me to analyze and 
-                visualize data effectively.
+                I have developed skills in research, project management, and team leadership through active participation in community initiatives and cross-functional collaborations. Additionally, I am proficient in tools such as Tableau, Looker, Microsoft Excel, Orange, and Google Suite, enabling me to analyze and visualize data effectively.
               </p>
-              
+
               <p>
-                I'm eager to continue learning, innovating, and working with like-minded peers on projects 
-                that challenge the status quo in the evolving fields of computer engineering and data science.
+                I am eager to keep learning, innovating, and collaborating with like-minded peers on projects that challenge the status quo in the evolving fields of computer engineering and data science.
               </p>
+
             </div>
           </div>
 
@@ -52,8 +43,14 @@ const About: React.FC = () => {
               
               <div className="space-y-4">
                 <div className="flex items-start space-x-4">
-                  <div className="w-3 h-3 bg-blue-600 rounded-full mt-2 flex-shrink-0"></div>
-                  <div>
+                  {/* University Logo Placeholder */}
+                  <div className="w-16 h-16 bg-white rounded-lg shadow-sm flex items-center justify-center flex-shrink-0">
+                    <div className="w-12 h-12 bg-gradient-to-br from-yellow-500 to-red-600 rounded-lg flex items-center justify-center">
+                      <span className="text-white font-bold text-xs">UI</span>
+                    </div>
+                  </div>
+                  
+                  <div className="flex-1">
                     <h4 className="text-xl font-semibold text-gray-900">
                       Bachelor of Engineering in Computer Engineering
                     </h4>

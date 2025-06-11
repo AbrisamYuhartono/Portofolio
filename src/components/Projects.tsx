@@ -33,6 +33,17 @@ const Projects: React.FC = () => {
     }
   };
 
+  const getProjectImage = (projectId: string) => {
+    const imageMap: { [key: string]: string } = {
+      'jbus': 'https://images.pexels.com/photos/1181467/pexels-photo-1181467.jpeg?auto=compress&cs=tinysrgb&w=400',
+      'eco-construct': 'https://images.pexels.com/photos/1108572/pexels-photo-1108572.jpeg?auto=compress&cs=tinysrgb&w=400',
+      'fishhaven': 'https://images.pexels.com/photos/1123982/pexels-photo-1123982.jpeg?auto=compress&cs=tinysrgb&w=400',
+      'hotel-booking': 'https://images.pexels.com/photos/271624/pexels-photo-271624.jpeg?auto=compress&cs=tinysrgb&w=400',
+      'myfinance': 'https://images.pexels.com/photos/590022/pexels-photo-590022.jpeg?auto=compress&cs=tinysrgb&w=400'
+    };
+    return imageMap[projectId] || 'https://images.pexels.com/photos/1181467/pexels-photo-1181467.jpeg?auto=compress&cs=tinysrgb&w=400';
+  };
+
   return (
     <section id="projects" className="py-20 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -51,16 +62,26 @@ const Projects: React.FC = () => {
               className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 
                        transform hover:-translate-y-2 overflow-hidden group"
             >
-              {/* Project Header */}
-              <div className="p-6 pb-4">
-                <div className="flex items-center justify-between mb-4">
+              {/* Project Image */}
+              <div className="relative h-48 overflow-hidden">
+                <img 
+                  src={getProjectImage(project.id)}
+                  alt={project.title}
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 
+                              group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div className="absolute top-4 right-4">
                   <span className={`inline-flex items-center px-3 py-1 rounded-full text-sm font-medium 
-                                 ${getCategoryColor(project.category)}`}>
+                                 ${getCategoryColor(project.category)} backdrop-blur-sm`}>
                     {getCategoryIcon(project.category)}
                     <span className="ml-2">{project.category}</span>
                   </span>
                 </div>
-                
+              </div>
+
+              {/* Project Content */}
+              <div className="p-6">
                 <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 
                              transition-colors duration-200">
                   {project.title}
@@ -69,11 +90,9 @@ const Projects: React.FC = () => {
                 <p className="text-gray-600 leading-relaxed mb-6">
                   {project.description}
                 </p>
-              </div>
 
-              {/* Technologies */}
-              <div className="px-6 pb-4">
-                <div className="flex flex-wrap gap-2">
+                {/* Technologies */}
+                <div className="flex flex-wrap gap-2 mb-6">
                   {project.technologies.map((tech, index) => (
                     <span
                       key={index}
@@ -84,10 +103,8 @@ const Projects: React.FC = () => {
                     </span>
                   ))}
                 </div>
-              </div>
 
-              {/* Project Actions */}
-              <div className="px-6 pb-6">
+                {/* Project Actions */}
                 <div className="flex space-x-3">
                   <button className="flex-1 flex items-center justify-center px-4 py-2 bg-blue-600 
                                    text-white rounded-lg hover:bg-blue-700 transition-colors duration-200 

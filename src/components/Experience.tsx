@@ -3,6 +3,27 @@ import { Briefcase, Calendar, MapPin } from 'lucide-react';
 import { experiences } from '../data/portfolioData';
 
 const Experience: React.FC = () => {
+  const getCompanyLogo = (company: string) => {
+    if (company.includes('PT Inovasi Lentera Cipta Kreasi')) {
+      return (
+        <div className="w-12 h-12 bg-gradient-to-br from-purple-600 to-pink-600 rounded-lg flex items-center justify-center">
+          <span className="text-white font-bold text-xs">ILCK</span>
+        </div>
+      );
+    } else if (company.includes('IME FTUI')) {
+      return (
+        <div className="w-12 h-12 bg-gradient-to-br from-blue-600 to-teal-600 rounded-lg flex items-center justify-center">
+          <span className="text-white font-bold text-xs">IME</span>
+        </div>
+      );
+    }
+    return (
+      <div className="w-12 h-12 bg-gradient-to-br from-gray-600 to-gray-800 rounded-lg flex items-center justify-center">
+        <Briefcase className="h-6 w-6 text-white" />
+      </div>
+    );
+  };
+
   return (
     <section id="experience" className="py-20 bg-white">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -31,18 +52,25 @@ const Experience: React.FC = () => {
                 <div className="ml-8 flex-1">
                   <div className="bg-gradient-to-br from-blue-50 to-teal-50 rounded-xl p-8 shadow-lg 
                                 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
-                    <div className="mb-4">
-                      <h3 className="text-xl font-bold text-gray-900 mb-2">
-                        {experience.title}
-                      </h3>
-                      <p className="text-blue-600 font-semibold text-lg mb-3">
-                        {experience.company}
-                      </p>
-                      <div className="flex items-center text-gray-600 space-x-4">
-                        <span className="flex items-center">
-                          <Calendar className="h-4 w-4 mr-2" />
-                          {experience.period}
-                        </span>
+                    <div className="flex items-start space-x-4 mb-4">
+                      {/* Company Logo */}
+                      <div className="flex-shrink-0">
+                        {getCompanyLogo(experience.company)}
+                      </div>
+                      
+                      <div className="flex-1">
+                        <h3 className="text-xl font-bold text-gray-900 mb-2">
+                          {experience.title}
+                        </h3>
+                        <p className="text-blue-600 font-semibold text-lg mb-3">
+                          {experience.company}
+                        </p>
+                        <div className="flex items-center text-gray-600 space-x-4">
+                          <span className="flex items-center">
+                            <Calendar className="h-4 w-4 mr-2" />
+                            {experience.period}
+                          </span>
+                        </div>
                       </div>
                     </div>
                     

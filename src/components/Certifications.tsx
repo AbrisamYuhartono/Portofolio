@@ -111,7 +111,7 @@ const Certifications: React.FC = () => {
             {/* Modal Content */}
             <div className="p-6 space-y-6">
               {/* Certificate Image Placeholder */}
-              <div className="w-full h-48 rounded-xl overflow-hidden border-2 border-gray-200 shadow-sm">
+              <div className="w-full h-full rounded-xl overflow-hidden border-2 border-gray-200 shadow-sm">
               {selectedCertification.image ? (
                 <img
                 src={selectedCertification.image}

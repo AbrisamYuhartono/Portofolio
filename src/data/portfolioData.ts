@@ -97,7 +97,7 @@ export const certifications: Certification[] = [
     dateIssued: 'Jun 2025',
     description: 'Data manipulation, analysis, and visualization using Python libraries.',
     skills: ['Python', 'Data Analysis', 'Pandas', 'NumPy'],
-    image: 'https://your-image-url.com/ccna-intro.jpg'
+    image: 'https://github.com/AbrisamYuhartono/Portofolio/blob/main/Media/Data%20Analysis%20with%20Python.png?raw=true'
   },
   {
     id: 'design-thinking',
@@ -106,7 +106,7 @@ export const certifications: Certification[] = [
     dateIssued: 'Feb 2025',
     description: 'Human-centered design methodology for enterprise solutions.',
     skills: ['Design Thinking', 'User Experience', 'Problem Solving'],
-    image: 'https://your-image-url.com/ccna-intro.jpg'
+    image: 'https://github.com/AbrisamYuhartono/Portofolio/blob/main/Media/Enterprise%20Design%20Thinking%20Practitioner.png?raw=true'
   },
   {
     id: 'deep-learning',
@@ -115,7 +115,7 @@ export const certifications: Certification[] = [
     dateIssued: 'Jun 2025',
     description: 'Neural networks, deep learning architectures, and implementation.',
     skills: ['Deep Learning', 'Neural Networks', 'AI'],
-    image: 'https://your-image-url.com/ccna-intro.jpg'
+    image: 'https://github.com/AbrisamYuhartono/Portofolio/blob/main/Media/Deep%20Learning%20Fundamentals.png?raw=true'
   },
   {
     id: 'ml-python',
@@ -124,7 +124,7 @@ export const certifications: Certification[] = [
     dateIssued: 'Mar 2025',
     description: 'Machine learning algorithms and implementation using Python.',
     skills: ['Machine Learning', 'Python', 'Scikit-learn'],
-    image: 'https://your-image-url.com/ccna-intro.jpg'
+    image: 'https://github.com/AbrisamYuhartono/Portofolio/blob/main/Media/Machine%20Learning%20with%20Python.png?raw=true'
   },
   {
     id: 'statistics',
@@ -133,7 +133,7 @@ export const certifications: Certification[] = [
     dateIssued: 'Jun 2025',
     description: 'Statistical analysis, probability, and data interpretation.',
     skills: ['Statistics', 'Data Analysis', 'Probability'],
-    image: 'https://your-image-url.com/ccna-intro.jpg'
+    image: 'https://github.com/AbrisamYuhartono/Portofolio/blob/main/Media/Statistics%20101.png?raw=true'
   },
   {
     id: 'sql-databases',
@@ -142,7 +142,7 @@ export const certifications: Certification[] = [
     dateIssued: 'Jun 2025',
     description: 'Database design, SQL queries, and relational database management.',
     skills: ['SQL', 'Database Design', 'Data Management'],
-    image: 'https://your-image-url.com/ccna-intro.jpg'
+    image: 'https://github.com/AbrisamYuhartono/Portofolio/blob/main/Media/SQL%20and%20Relational%20Databases%20101.png?raw=true'
   },
   {
     id: 'python-data-science',

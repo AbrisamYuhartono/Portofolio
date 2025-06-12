@@ -67,7 +67,7 @@ export const certifications: Certification[] = [
     id: 'ccna-intro',
     title: 'CCNA: Introduction to Networks',
     issuer: 'Cisco',
-    dateIssued: '2024',
+    dateIssued: 'Dec 2024',
     description: 'Fundamental networking concepts, protocols, and network architecture.',
     skills: ['Networking', 'TCP/IP', 'Network Protocols']
   },
@@ -75,7 +75,7 @@ export const certifications: Certification[] = [
     id: 'ccna-enterprise',
     title: 'CCNA: Enterprise Networking, Security, and Automation',
     issuer: 'Cisco',
-    dateIssued: '2024',
+    dateIssued: 'Jul 2024',
     description: 'Advanced enterprise networking, security implementations, and network automation.',
     skills: ['Network Security', 'Enterprise Networking', 'Automation']
   },
@@ -83,7 +83,7 @@ export const certifications: Certification[] = [
     id: 'ccna-switching',
     title: 'CCNA: Switching, Routing, and Wireless Essentials',
     issuer: 'Cisco',
-    dateIssued: '2024',
+    dateIssued: 'Dec 2024',
     description: 'Switching concepts, routing protocols, and wireless network fundamentals.',
     skills: ['Routing', 'Switching', 'Wireless Networks']
   },
@@ -91,7 +91,7 @@ export const certifications: Certification[] = [
     id: 'data-analysis-python',
     title: 'Data Analysis with Python',
     issuer: 'IBM',
-    dateIssued: '2024',
+    dateIssued: 'Jun 2025',
     description: 'Data manipulation, analysis, and visualization using Python libraries.',
     skills: ['Python', 'Data Analysis', 'Pandas', 'NumPy']
   },
@@ -99,7 +99,7 @@ export const certifications: Certification[] = [
     id: 'design-thinking',
     title: 'Enterprise Design Thinking Practitioner',
     issuer: 'IBM',
-    dateIssued: '2024',
+    dateIssued: 'Feb 2025',
     description: 'Human-centered design methodology for enterprise solutions.',
     skills: ['Design Thinking', 'User Experience', 'Problem Solving']
   },
@@ -107,7 +107,7 @@ export const certifications: Certification[] = [
     id: 'deep-learning',
     title: 'Deep Learning Fundamentals',
     issuer: 'IBM',
-    dateIssued: '2024',
+    dateIssued: 'Jun 2025',
     description: 'Neural networks, deep learning architectures, and implementation.',
     skills: ['Deep Learning', 'Neural Networks', 'AI']
   },
@@ -115,7 +115,7 @@ export const certifications: Certification[] = [
     id: 'ml-python',
     title: 'Machine Learning with Python - Level 1',
     issuer: 'IBM',
-    dateIssued: '2024',
+    dateIssued: 'Mar 2025',
     description: 'Machine learning algorithms and implementation using Python.',
     skills: ['Machine Learning', 'Python', 'Scikit-learn']
   },
@@ -123,7 +123,7 @@ export const certifications: Certification[] = [
     id: 'statistics',
     title: 'Statistics 101',
     issuer: 'IBM',
-    dateIssued: '2024',
+    dateIssued: 'Jun 2025',
     description: 'Statistical analysis, probability, and data interpretation.',
     skills: ['Statistics', 'Data Analysis', 'Probability']
   },
@@ -131,7 +131,7 @@ export const certifications: Certification[] = [
     id: 'sql-databases',
     title: 'SQL and Relational Databases 101',
     issuer: 'IBM',
-    dateIssued: '2024',
+    dateIssued: 'Jun 2025',
     description: 'Database design, SQL queries, and relational database management.',
     skills: ['SQL', 'Database Design', 'Data Management']
   },
@@ -139,7 +139,7 @@ export const certifications: Certification[] = [
     id: 'python-data-science',
     title: 'Python 101 for Data Science',
     issuer: 'IBM',
-    dateIssued: '2024',
+    dateIssued: 'Jun 2025',
     description: 'Python programming fundamentals for data science applications.',
     skills: ['Python', 'Data Science', 'Programming']
   }

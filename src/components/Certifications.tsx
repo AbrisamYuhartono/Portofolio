@@ -36,12 +36,28 @@ const Certifications: React.FC = () => {
                          cursor-pointer group border border-gray-100"
               >
                 {/* Company Logo Placeholder */}
-                <div className="w-16 h-16 bg-white rounded-lg mb-4 flex items-center justify-center 
-                              shadow-sm group-hover:shadow-md transition-shadow duration-200">
-                  <div className="w-12 h-12 bg-gradient-to-br from-blue-600 to-teal-600 rounded-lg 
-                                flex items-center justify-center">
+                <div
+                className="w-16 h-16 bg-white rounded-lg mb-4 flex items-center justify-center 
+                          shadow-sm group-hover:shadow-md transition-shadow duration-200"
+              >
+                {certification.issuer === 'IBM' || certification.issuer === 'Cisco' ? (
+                <img
+                  src={
+                  certification.issuer === 'IBM'
+                  ? 'https://github.com/AbrisamYuhartono/Portofolio/blob/main/Media/IBM.png?raw=true'
+                  : 'https://github.com/AbrisamYuhartono/Portofolio/blob/main/Media/Cisco.png?raw=true'
+                }
+                  alt={`${certification.issuer} logo`}
+                  className="w-12 h-12 rounded-lg object-contain"
+                />
+                  ) : (
+                  <div
+                    className="w-12 h-12 bg-gradient-to-br from-blue-600 to-teal-600 rounded-lg 
+                              flex items-center justify-center"
+                >
                     <Award className="h-6 w-6 text-white" />
-                  </div>
+                        </div>
+                      )}
                 </div>
 
                 <h3 className="font-bold text-gray-900 mb-2 line-clamp-2 group-hover:text-blue-600 

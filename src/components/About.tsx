@@ -56,7 +56,7 @@ const About: React.FC = () => {
                     <h4 className="text-xl font-semibold text-gray-900">
                       Bachelor of Engineering in Computer Engineering
                     </h4>
-                    <p className="text-blue-600 font-medium">University of Indonesia</p>
+                    <p className="text-blue-600 font-medium">Universitas Indonesia</p>
                     <div className="flex items-center text-gray-600 mt-2 space-x-4">
                       <span className="flex items-center">
                         <Calendar className="h-4 w-4 mr-1" />
@@ -64,7 +64,7 @@ const About: React.FC = () => {
                       </span>
                       <span className="flex items-center">
                         <MapPin className="h-4 w-4 mr-1" />
-                        Jakarta, Indonesia
+                        Depok, Indonesia
                       </span>
                     </div>
                   </div>

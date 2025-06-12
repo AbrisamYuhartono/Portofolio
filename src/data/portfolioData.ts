@@ -70,7 +70,7 @@ export const certifications: Certification[] = [
     dateIssued: 'Dec 2024',
     description: 'Fundamental networking concepts, protocols, and network architecture.',
     skills: ['Networking', 'TCP/IP', 'Network Protocols'],
-    image: 'https://your-image-url.com/ccna-intro.jpg'
+    image: 'https://github.com/AbrisamYuhartono/Portofolio/blob/main/Media/CCNA%20Introduction%20to%20Networks.png?raw=true'
   },
   {
     id: 'ccna-enterprise',
@@ -79,7 +79,7 @@ export const certifications: Certification[] = [
     dateIssued: 'Jul 2024',
     description: 'Advanced enterprise networking, security implementations, and network automation.',
     skills: ['Network Security', 'Enterprise Networking', 'Automation'],
-    image: 'https://your-image-url.com/ccna-intro.jpg'
+    image: 'https://github.com/AbrisamYuhartono/Portofolio/blob/main/Media/CCNA%20Enterprise%20Networking,%20Security,%20and%20Automation.png?raw=true'
   },
   {
     id: 'ccna-switching',
@@ -88,7 +88,7 @@ export const certifications: Certification[] = [
     dateIssued: 'Dec 2024',
     description: 'Switching concepts, routing protocols, and wireless network fundamentals.',
     skills: ['Routing', 'Switching', 'Wireless Networks'],
-    image: 'https://your-image-url.com/ccna-intro.jpg'
+    image: 'https://github.com/AbrisamYuhartono/Portofolio/blob/main/Media/CCNA%20Switching,%20Routing,%20and%20Wireless%20Essentials.png?raw=true'
   },
   {
     id: 'data-analysis-python',

@@ -9,7 +9,7 @@ const Hero: React.FC = () => {
         <div className="space-y-8">
           {/* Profile Image Placeholder */}
           <div className="flex justify-center">
-  <div className="w- h-72 rounded-full bg-gradient-to-br from-blue-600 to-teal-600 
+  <div className="w-48 h-72 rounded-full bg-gradient-to-br from-blue-600 to-teal-600 
                   flex items-center justify-center shadow-xl  overflow-hidden">
     <img
       src="https://github.com/AbrisamYuhartono/Portofolio/blob/main/Media/Muhammad%20Abrisam%20Cahyo%20Juhartono_Teknik%20Komputer.jpg?raw=true"

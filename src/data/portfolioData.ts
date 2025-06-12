@@ -69,7 +69,8 @@ export const certifications: Certification[] = [
     issuer: 'Cisco',
     dateIssued: 'Dec 2024',
     description: 'Fundamental networking concepts, protocols, and network architecture.',
-    skills: ['Networking', 'TCP/IP', 'Network Protocols']
+    skills: ['Networking', 'TCP/IP', 'Network Protocols'],
+    image: 'https://your-image-url.com/ccna-intro.jpg'
   },
   {
     id: 'ccna-enterprise',
@@ -77,7 +78,8 @@ export const certifications: Certification[] = [
     issuer: 'Cisco',
     dateIssued: 'Jul 2024',
     description: 'Advanced enterprise networking, security implementations, and network automation.',
-    skills: ['Network Security', 'Enterprise Networking', 'Automation']
+    skills: ['Network Security', 'Enterprise Networking', 'Automation'],
+    image: 'https://your-image-url.com/ccna-intro.jpg'
   },
   {
     id: 'ccna-switching',
@@ -85,7 +87,8 @@ export const certifications: Certification[] = [
     issuer: 'Cisco',
     dateIssued: 'Dec 2024',
     description: 'Switching concepts, routing protocols, and wireless network fundamentals.',
-    skills: ['Routing', 'Switching', 'Wireless Networks']
+    skills: ['Routing', 'Switching', 'Wireless Networks'],
+    image: 'https://your-image-url.com/ccna-intro.jpg'
   },
   {
     id: 'data-analysis-python',
@@ -93,7 +96,8 @@ export const certifications: Certification[] = [
     issuer: 'IBM',
     dateIssued: 'Jun 2025',
     description: 'Data manipulation, analysis, and visualization using Python libraries.',
-    skills: ['Python', 'Data Analysis', 'Pandas', 'NumPy']
+    skills: ['Python', 'Data Analysis', 'Pandas', 'NumPy'],
+    image: 'https://your-image-url.com/ccna-intro.jpg'
   },
   {
     id: 'design-thinking',
@@ -101,7 +105,8 @@ export const certifications: Certification[] = [
     issuer: 'IBM',
     dateIssued: 'Feb 2025',
     description: 'Human-centered design methodology for enterprise solutions.',
-    skills: ['Design Thinking', 'User Experience', 'Problem Solving']
+    skills: ['Design Thinking', 'User Experience', 'Problem Solving'],
+    image: 'https://your-image-url.com/ccna-intro.jpg'
   },
   {
     id: 'deep-learning',
@@ -109,7 +114,8 @@ export const certifications: Certification[] = [
     issuer: 'IBM',
     dateIssued: 'Jun 2025',
     description: 'Neural networks, deep learning architectures, and implementation.',
-    skills: ['Deep Learning', 'Neural Networks', 'AI']
+    skills: ['Deep Learning', 'Neural Networks', 'AI'],
+    image: 'https://your-image-url.com/ccna-intro.jpg'
   },
   {
     id: 'ml-python',
@@ -117,7 +123,8 @@ export const certifications: Certification[] = [
     issuer: 'IBM',
     dateIssued: 'Mar 2025',
     description: 'Machine learning algorithms and implementation using Python.',
-    skills: ['Machine Learning', 'Python', 'Scikit-learn']
+    skills: ['Machine Learning', 'Python', 'Scikit-learn'],
+    image: 'https://your-image-url.com/ccna-intro.jpg'
   },
   {
     id: 'statistics',
@@ -125,7 +132,8 @@ export const certifications: Certification[] = [
     issuer: 'IBM',
     dateIssued: 'Jun 2025',
     description: 'Statistical analysis, probability, and data interpretation.',
-    skills: ['Statistics', 'Data Analysis', 'Probability']
+    skills: ['Statistics', 'Data Analysis', 'Probability'],
+    image: 'https://your-image-url.com/ccna-intro.jpg'
   },
   {
     id: 'sql-databases',
@@ -133,7 +141,8 @@ export const certifications: Certification[] = [
     issuer: 'IBM',
     dateIssued: 'Jun 2025',
     description: 'Database design, SQL queries, and relational database management.',
-    skills: ['SQL', 'Database Design', 'Data Management']
+    skills: ['SQL', 'Database Design', 'Data Management'],
+    image: 'https://your-image-url.com/ccna-intro.jpg'
   },
   {
     id: 'python-data-science',
@@ -141,7 +150,8 @@ export const certifications: Certification[] = [
     issuer: 'IBM',
     dateIssued: 'Jun 2025',
     description: 'Python programming fundamentals for data science applications.',
-    skills: ['Python', 'Data Science', 'Programming']
+    skills: ['Python', 'Data Science', 'Programming'],
+    image: 'https://your-image-url.com/ccna-intro.jpg'
   }
 ];
 

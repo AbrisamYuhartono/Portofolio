@@ -5,6 +5,7 @@ import { Certification } from '../types';
 
 const Certifications: React.FC = () => {
   const [selectedCertification, setSelectedCertification] = useState<Certification | null>(null);
+  const [visibleCount, setVisibleCount] = useState(8);
 
   const openModal = (certification: Certification) => {
     setSelectedCertification(certification);
@@ -14,10 +15,15 @@ const Certifications: React.FC = () => {
     setSelectedCertification(null);
   };
 
+  const loadMore = () => {
+    setVisibleCount((prev) => prev + 8);
+  };
+
   return (
     <>
       <section id="certifications" className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          {/* Section Header */}
           <div className="text-center mb-16">
             <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Certifications</h2>
             <div className="w-24 h-1 bg-gradient-to-r from-blue-600 to-teal-600 mx-auto mb-6"></div>
@@ -26,58 +32,53 @@ const Certifications: React.FC = () => {
             </p>
           </div>
 
+          {/* Certification Cards */}
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-            {certifications.map((certification) => (
+            {certifications.slice(0, visibleCount).map((certification) => (
               <div
                 key={certification.id}
                 onClick={() => openModal(certification)}
                 className="bg-gradient-to-br from-blue-50 to-teal-50 rounded-xl p-6 shadow-lg 
-                         hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 
-                         cursor-pointer group border border-gray-100"
+                           hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 
+                           cursor-pointer group border border-gray-100"
               >
-                {/* Company Logo Placeholder */}
-                <div
-                className="w-16 h-16 bg-white rounded-lg mb-4 flex items-center justify-center 
-                          shadow-sm group-hover:shadow-md transition-shadow duration-200"
-              >
-                {certification.issuer === 'IBM' || certification.issuer === 'Cisco' ? (
-                <img
-                  src={
-                  certification.issuer === 'IBM'
-                  ? 'https://github.com/AbrisamYuhartono/Portofolio/blob/main/Media/IBM.png?raw=true'
-                  : 'https://github.com/AbrisamYuhartono/Portofolio/blob/main/Media/Cisco.png?raw=true'
-                }
-                  alt={`${certification.issuer} logo`}
-                  className="w-12 h-12 rounded-lg object-contain"
-                />
+                <div className="w-16 h-16 bg-white rounded-lg mb-4 flex items-center justify-center shadow-sm group-hover:shadow-md transition-shadow duration-200">
+                  {/* Issuer Logo or Icon */}
+                  {certification.issuer === 'IBM' || certification.issuer === 'Cisco' ? (
+                    <img
+                      src={
+                        certification.issuer === 'IBM'
+                          ? 'https://github.com/AbrisamYuhartono/Portofolio/blob/main/Media/IBM.png?raw=true'
+                          : 'https://github.com/AbrisamYuhartono/Portofolio/blob/main/Media/Cisco.png?raw=true'
+                      }
+                      alt={`${certification.issuer} logo`}
+                      className="w-12 h-12 rounded-lg object-contain"
+                    />
                   ) : (
-                  <div
-                    className="w-12 h-12 bg-gradient-to-br from-blue-600 to-teal-600 rounded-lg 
-                              flex items-center justify-center"
-                >
-                    <Award className="h-6 w-6 text-white" />
-                        </div>
-                      )}
+                    <div className="w-12 h-12 bg-gradient-to-br from-blue-600 to-teal-600 rounded-lg flex items-center justify-center">
+                      <Award className="h-6 w-6 text-white" />
+                    </div>
+                  )}
                 </div>
 
-                <h3 className="font-bold text-gray-900 mb-2 line-clamp-2 group-hover:text-blue-600 
-                             transition-colors duration-200">
+                {/* Title */}
+                <h3 className="font-bold text-gray-900 mb-2 line-clamp-2 group-hover:text-blue-600 transition-colors duration-200">
                   {certification.title}
                 </h3>
-                
-                <p className="text-blue-600 font-semibold mb-3">
-                  {certification.issuer}
-                </p>
 
+                {/* Issuer */}
+                <p className="text-blue-600 font-semibold mb-3">{certification.issuer}</p>
+
+                {/* Date */}
                 <div className="flex items-center text-gray-600 text-sm mb-4">
                   <Calendar className="h-4 w-4 mr-2" />
                   {certification.dateIssued}
                 </div>
 
+                {/* Skills */}
                 <div className="flex flex-wrap gap-2">
                   {certification.skills.slice(0, 2).map((skill, index) => (
-                    <span key={index} className="px-2 py-1 bg-white text-xs text-gray-700 
-                                               rounded-full shadow-sm">
+                    <span key={index} className="px-2 py-1 bg-white text-xs text-gray-700 rounded-full shadow-sm">
                       {skill}
                     </span>
                   ))}
@@ -90,6 +91,28 @@ const Certifications: React.FC = () => {
               </div>
             ))}
           </div>
+
+          {/* Load More Button */}
+          {certifications.length > 8 && (
+            <div className="mt-8 flex justify-center gap-4">
+              {visibleCount < certifications.length && (
+                <button
+                  onClick={loadMore}
+                  className="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors duration-300"
+                >
+                  Load More
+                </button>
+              )}
+              {visibleCount > 8 && (
+                <button
+                  onClick={() => setVisibleCount(8)}
+                  className="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors duration-300"
+                >
+                  Show Less
+                </button>
+              )}
+            </div>
+          )}
         </div>
       </section>
 
@@ -110,30 +133,27 @@ const Certifications: React.FC = () => {
 
             {/* Modal Content */}
             <div className="p-6 space-y-6">
-              {/* Certificate Image Placeholder */}
+              {/* Image */}
               <div className="w-full h-full rounded-xl overflow-hidden border-2 border-gray-200 shadow-sm">
-              {selectedCertification.image ? (
-                <img
-                src={selectedCertification.image}
-                alt={`${selectedCertification.title} Certificate`}
-                className="w-full h-full object-cover"
-                />
+                {selectedCertification.image ? (
+                  <img
+                    src={selectedCertification.image}
+                    alt={`${selectedCertification.title} Certificate`}
+                    className="w-full h-full object-cover"
+                  />
                 ) : (
-                <div className="w-full h-full bg-gradient-to-br from-blue-50 to-teal-50 
-                    flex items-center justify-center border-2 border-dashed border-gray-300">
-                  <div className="text-center">
-                  <Award className="h-12 w-12 text-gray-400 mx-auto mb-2" />
-                  <p className="text-gray-500">Certificate Image Not Available</p>
-                </div>
-              </div>
-              )}
+                  <div className="w-full h-full bg-gradient-to-br from-blue-50 to-teal-50 flex items-center justify-center border-2 border-dashed border-gray-300">
+                    <div className="text-center">
+                      <Award className="h-12 w-12 text-gray-400 mx-auto mb-2" />
+                      <p className="text-gray-500">Certificate Image Not Available</p>
+                    </div>
+                  </div>
+                )}
               </div>
 
-              {/* Certification Info */}
+              {/* Details */}
               <div className="space-y-4">
-                <h4 className="text-xl font-bold text-gray-900">
-                  {selectedCertification.title}
-                </h4>
+                <h4 className="text-xl font-bold text-gray-900">{selectedCertification.title}</h4>
 
                 <div className="flex items-center space-x-4 text-gray-600">
                   <div className="flex items-center">
@@ -146,11 +166,8 @@ const Certifications: React.FC = () => {
                   </div>
                 </div>
 
-                <p className="text-gray-700 leading-relaxed">
-                  {selectedCertification.description}
-                </p>
+                <p className="text-gray-700 leading-relaxed">{selectedCertification.description}</p>
 
-                {/* Skills Covered */}
                 <div>
                   <h5 className="font-semibold text-gray-900 mb-3 flex items-center">
                     <CheckCircle className="h-5 w-5 text-green-600 mr-2" />
@@ -158,8 +175,10 @@ const Certifications: React.FC = () => {
                   </h5>
                   <div className="flex flex-wrap gap-2">
                     {selectedCertification.skills.map((skill, index) => (
-                      <span key={index} className="px-3 py-2 bg-blue-100 text-blue-800 
-                                                 rounded-full text-sm font-medium">
+                      <span
+                        key={index}
+                        className="px-3 py-2 bg-blue-100 text-blue-800 rounded-full text-sm font-medium"
+                      >
                         {skill}
                       </span>
                     ))}

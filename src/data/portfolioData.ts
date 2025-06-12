@@ -151,7 +151,7 @@ export const certifications: Certification[] = [
     dateIssued: 'Jun 2025',
     description: 'Python programming fundamentals for data science applications.',
     skills: ['Python', 'Data Science', 'Programming'],
-    image: 'https://your-image-url.com/ccna-intro.jpg'
+    image: 'https://github.com/AbrisamYuhartono/Portofolio/blob/main/Media/Python%20101%20for%20Data%20Science.png?raw=true'
   }
 ];
 

@@ -13,8 +13,8 @@ import {
 const Skills: React.FC = () => {
   const technicalSkills = [
     { name: 'C/C++', level: 85, icon: <Code className="h-5 w-5" /> },
-    { name: 'Python', level: 90, icon: <Code className="h-5 w-5" /> },
-    { name: 'Java', level: 80, icon: <Code className="h-5 w-5" /> },
+    { name: 'Python', level: 80, icon: <Code className="h-5 w-5" /> },
+    { name: 'Java', level: 90, icon: <Code className="h-5 w-5" /> },
     { name: 'JavaScript', level: 85, icon: <Globe className="h-5 w-5" /> },
     { name: 'React', level: 85, icon: <Globe className="h-5 w-5" /> },
     { name: 'SQL', level: 80, icon: <Database className="h-5 w-5" /> },

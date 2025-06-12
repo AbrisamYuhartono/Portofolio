@@ -45,9 +45,11 @@ const About: React.FC = () => {
                 <div className="flex items-start space-x-4">
                   {/* University Logo Placeholder */}
                   <div className="w-16 h-16 bg-white rounded-lg shadow-sm flex items-center justify-center flex-shrink-0">
-                    <div className="w-12 h-12 bg-gradient-to-br from-yellow-500 to-red-600 rounded-lg flex items-center justify-center">
-                      <span className="text-white font-bold text-xs">UI</span>
-                    </div>
+                     <img
+                        src="https://github.com/AbrisamYuhartono/Portofolio/blob/main/Media/UI.png?raw=true"
+                        alt="Universitas Indonesia Logo"
+                        className="w-12 h-12 object-contain rounded-lg"
+                      />
                   </div>
                   
                   <div className="flex-1">

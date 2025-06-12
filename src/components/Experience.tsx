@@ -7,7 +7,11 @@ const Experience: React.FC = () => {
     if (company.includes('PT Inovasi Lentera Cipta Kreasi')) {
       return (
         <div className="w-12 h-12 bg-gradient-to-br from-purple-600 to-pink-600 rounded-lg flex items-center justify-center">
-          <span className="text-white font-bold text-xs">ILCK</span>
+          <img
+              src="https://github.com/AbrisamYuhartono/Portofolio/blob/main/Media/UI.png?raw=true"
+              alt="Inovasi Lentera Cipta Kreasi Logo"
+              className="w-12 h-12 object-contain rounded-lg"
+          />        
         </div>
       );
     } else if (company.includes('IME FTUI')) {

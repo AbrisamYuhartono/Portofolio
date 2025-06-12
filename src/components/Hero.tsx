@@ -9,11 +9,15 @@ const Hero: React.FC = () => {
         <div className="space-y-8">
           {/* Profile Image Placeholder */}
           <div className="flex justify-center">
-            <div className="w-32 h-32 rounded-full bg-gradient-to-br from-blue-600 to-teal-600 
-                          flex items-center justify-center shadow-xl animate-pulse">
-              <span className="text-3xl font-bold text-white">MA</span>
-            </div>
-          </div>
+  <div className="w- h-72 rounded-full bg-gradient-to-br from-blue-600 to-teal-600 
+                  flex items-center justify-center shadow-xl  overflow-hidden">
+    <img
+      src="https://github.com/AbrisamYuhartono/Portofolio/blob/main/Media/Muhammad%20Abrisam%20Cahyo%20Juhartono_Teknik%20Komputer.jpg?raw=true"
+      alt="Muhammad Abrisam Cahyo Juhartono"
+      className="w-full h-full object-cover"
+    />
+  </div>
+</div>
 
           {/* Name and Title */}
           <div className="space-y-4">

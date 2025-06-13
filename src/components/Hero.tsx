@@ -4,7 +4,7 @@ import { smoothScrollTo } from '../utils/smoothScroll';
 
 const Hero: React.FC = () => {
   return (
-    <section className="min-h-screen flex items-center justify-center relative pt-24 bg-gradient-to-br from-blue-50 via-white to-teal-50">
+<section className="min-h-screen flex items-center justify-center relative bg-gradient-to-br from-sky-200 via-white to-indigo-200">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <div className="space-y-8">
           {/* Profile Image Placeholder */}
@@ -69,6 +69,15 @@ const Hero: React.FC = () => {
                        hover:text-blue-600 transform hover:scale-110 transition-all duration-200"
             >
               <Linkedin className="h-5 w-5" />
+            </a>
+            <a
+              href="https://github.com/AbrisamYuhartono"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-3 rounded-full bg-white shadow-md hover:shadow-lg text-gray-600 
+                       hover:text-blue-600 transform hover:scale-110 transition-all duration-200"
+            >
+              <Github className="h-5 w-5" />
             </a>
           </div>
         </div>

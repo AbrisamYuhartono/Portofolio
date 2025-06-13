@@ -4,37 +4,67 @@ export const projects: Project[] = [
   {
     id: 'jbus',
     title: 'JBus',
-    description: 'Android application for bus ticket booking system built with Java using Object-Oriented Programming principles.',
+    short_description: 'Android Bus Ticket Booking App',
+    description: 'bla bla bla',
     technologies: ['Java', 'Android', 'OOP'],
-    category: 'Mobile Development'
+    category: 'Mobile Development',
+    image: '/images/placeholder.png', // Use real path or placeholder
+    github: 'https://github.com/AbrisamYuhartono/JBus'
+
   },
   {
     id: 'eco-construct',
     title: 'ECO-CONSTRUCT',
-    description: 'Cross-platform marketplace platform connecting producers and consumers of eco-friendly construction materials. Features React Native frontend and PyTorch for real-time plant species detection.',
+    short_description: 'Marketplace for Eco-Friendly Building Materials',
+    description: 'bla bla bla',
     technologies: ['React Native', 'PyTorch', 'JavaScript', 'Machine Learning'],
-    category: 'Full-Stack Development'
+    category: 'Full-Stack Development',
+    image: '/images/placeholder.png', // Use real path or placeholder
+    github: 'https://github.com/kevin-naufal/EcoConstruct'
+
   },
   {
     id: 'fishhaven',
     title: 'FishHaven',
-    description: 'Smart IoT Monitoring System for Fish Farming with real-time water quality monitoring, temperature sensing, and turbidity detection. Features remote monitoring via Blynk application.',
+    short_description: 'Smart IoT Monitoring System for Fish Farming',
+    description: 'bla bla bla',
     technologies: ['IoT', 'ESP32', 'Blynk', 'Sensors', 'Arduino'],
-    category: 'IoT Development'
+    category: 'IoT Development',
+    image: '/images/placeholder.png', // Use real path or placeholder
+    github: 'https://github.com/DarrenNathanaelB/FishHaven'
+
   },
   {
     id: 'hotel-booking',
     title: 'Hotel Booking System',
-    description: 'Comprehensive hotel reservation system that calculates pricing based on room type, guest count, and duration. Includes payment processing and change calculation features.',
-    technologies: ['Java', 'Database', 'Backend'],
-    category: 'Backend Development'
+    short_description: 'Room Reservation and Payment Calculator',    
+    description: 'bla bla bla',    
+    technologies: ['VHDL', 'Database', 'Backend'],
+    category: 'Backend Development',
+    image: '/images/placeholder.png', // Use real path or placeholder
+    github: 'https://github.com/auli-aziz/Hotel-Booking-System'
+
   },
   {
     id: 'myfinance',
     title: 'myFinance',
-    description: 'Personal finance management web application featuring expense tracking, budget planning, and financial analytics with a modern React frontend and PostgreSQL database.',
+    short_description: 'Personal Finance Management Web App',
+    description: 'bla bla bla',    
     technologies: ['React', 'PostgreSQL', 'JavaScript', 'Web Development'],
-    category: 'Full-Stack Development'
+    category: 'Full-Stack Development',
+    image: '/images/placeholder.png', // Use real path or placeholder
+    github: 'https://github.com/rusyd4/myFinance'
+
+  },
+  {
+    id: 'carpark',
+    title: 'Car Parking Sensor',
+    short_description: 'Ultrasonic-Based Distance Alert System.',
+    description: 'bla bla bla',
+    technologies: ['Arduino', 'HC-SR04 Sensor', 'I2C Communication', 'Assembly'],
+    category: 'Embedded Systems & IoT',
+    image: '/images/placeholder.png', // Use real path or placeholder
+    github: 'https://github.com/AbrisamYuhartono/Car-Parking-Sensor_SSF_Kelompok-23'
   }
 ];
 

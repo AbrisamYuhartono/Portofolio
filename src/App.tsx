@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import About from './components/About';
@@ -8,10 +9,10 @@ import Skills from './components/Skills';
 import Certifications from './components/Certifications';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import ProjectDetail from './components/ProjectDetails';
 
 function App() {
   useEffect(() => {
-    // Smooth scrolling for anchor links
     const handleHashChange = () => {
       const hash = window.location.hash.substring(1);
       if (hash) {
@@ -23,7 +24,7 @@ function App() {
 
           window.scrollTo({
             top: offsetPosition,
-            behavior: 'smooth'
+            behavior: 'smooth',
           });
         }
       }
@@ -34,19 +35,29 @@ function App() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-white">
-      <Header />
-      <main>
-        <Hero />
-        <About />
-        <Projects />
-        <Experience />
-        <Skills />
-        <Certifications />
-        <Contact />
-      </main>
-      <Footer />
-    </div>
+    <Router>
+      <div className="min-h-screen bg-white">
+        <Header />
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <main>
+                <Hero />
+                <About />
+                <Projects />
+                <Experience />
+                <Skills />
+                <Certifications />
+                <Contact />
+              </main>
+            }
+          />
+          <Route path="/projects/:id" element={<ProjectDetail />} />
+        </Routes>
+        <Footer />
+      </div>
+    </Router>
   );
 }
 

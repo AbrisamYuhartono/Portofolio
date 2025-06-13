@@ -1,6 +1,7 @@
 import React from 'react';
 import { ExternalLink, Github, Smartphone, Globe, Cpu, Server, Database } from 'lucide-react';
 import { projects } from '../data/portfolioData';
+import { Link } from 'react-router-dom';
 
 const Projects: React.FC = () => {
   const getCategoryIcon = (category: string) => {
@@ -88,7 +89,7 @@ const Projects: React.FC = () => {
                 </h3>
                 
                 <p className="text-gray-600 leading-relaxed mb-6">
-                  {project.description}
+                  {project.short_description}
                 </p>
 
                 {/* Technologies */}
@@ -106,17 +107,25 @@ const Projects: React.FC = () => {
 
                 {/* Project Actions */}
                 <div className="flex space-x-3">
-                  <button className="flex-1 flex items-center justify-center px-4 py-2 bg-blue-600 
-                                   text-white rounded-lg hover:bg-blue-700 transition-colors duration-200 
-                                   transform hover:scale-105">
+                  <Link
+                    to={`/projects/${project.id}`}
+                    className="flex-1 flex items-center justify-center px-4 py-2 bg-blue-600 
+                               text-white rounded-lg hover:bg-blue-700 transition-colors duration-200 
+                               transform hover:scale-105"
+                  >
                     <ExternalLink className="h-4 w-4 mr-2" />
                     View Project
-                  </button>
-                  <button className="flex items-center justify-center px-4 py-2 border border-gray-300 
-                                   text-gray-700 rounded-lg hover:border-blue-600 hover:text-blue-600 
-                                   transition-colors duration-200 transform hover:scale-105">
-                    <Github className="h-4 w-4" />
-                  </button>
+                  </Link>
+                  <a
+                      href={project.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center justify-center px-4 py-2 border border-gray-300 
+                                 text-gray-700 rounded-lg hover:border-blue-600 hover:text-blue-600 
+                                 transition-colors duration-200 transform hover:scale-105"
+                    >
+                      <Github className="h-4 w-4" />
+                      </a>
                 </div>
               </div>
             </div>

@@ -1,9 +1,13 @@
 export interface Project {
   id: string;
   title: string;
+  short_description: string;
   description: string;
   technologies: string[];
   category: string;
+  image: string;
+  github: string;
+
 }
 
 export interface Experience {
